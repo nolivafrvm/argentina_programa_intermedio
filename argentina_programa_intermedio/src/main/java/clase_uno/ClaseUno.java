@@ -1,5 +1,7 @@
 package clase_uno;
 
+import clase_uno.tipo_datos.TipoDatos;
+
 public class ClaseUno {
 
     public static void main(String[] args) {
@@ -20,9 +22,13 @@ public class ClaseUno {
         b = 15;
         while (a<b) {
             if (a % 2 == 0) { // MOD en Java es %
-                System.out.println("Pares");
+                System.out.print("Par: ");
+                System.out.println(a);
+            } else {
+                System.out.print("impar: ");
                 System.out.println(a);
             }
+
             a = a + 1 ;
         }
 

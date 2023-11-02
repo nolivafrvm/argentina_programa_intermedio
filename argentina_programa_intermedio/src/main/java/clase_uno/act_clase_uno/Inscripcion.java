@@ -15,7 +15,9 @@ public class Inscripcion {
 
         List<Materia> materiasAlumno = this.getAlumno().getMateriasAprobadas();
 
-
+        if (materiasCorrelativas.isEmpty()) {
+            return true;
+        }
 
         boolean estaAprobada = false;
         for (Materia materiaCorrelativa: materiasCorrelativas) {
