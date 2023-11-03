@@ -9,16 +9,12 @@ public class Test {
 
         Calculadora calc = new Calculadora();
 
-        Operacion opera = (a, b) -> {
+        Operacion operaSuma = (a, b) -> {
             a = a + 15;
-            b = a + 20;
+            b = a + 20;   // EXPRESION LAMBDA // Se puede hacer de todo
             return a + b + a;
         };
-        int suma = calc.calcular(unNumero, otroNumero, (a, b) -> {
-            a = a + 15;
-            b = a + 20;
-            return a + b + a;
-        });
+        int suma = calc.calcular(unNumero, otroNumero, operaSuma);
         System.out.println( "La suma de " + unNumero + " y " + otroNumero + " es: " + suma);
 
         int resta = calc.calcular(unNumero, otroNumero, (a, b) -> a - b);

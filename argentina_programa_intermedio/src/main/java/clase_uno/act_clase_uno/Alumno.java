@@ -9,7 +9,7 @@ public class Alumno {
     private String nombre;
     private String apellido;
     private LocalDate fechaNacimiento;
-    private List<Materia> materiasAprobadas = new ArrayList<>();
+        private List<Materia> materiasAprobadas = new ArrayList<>();
 
     public String getNombre() {
         return nombre;

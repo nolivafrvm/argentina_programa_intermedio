@@ -11,13 +11,14 @@ public class AppFuncional {
             return a+b*2;
         };
 
-//        InterfaceComun interfaceComun = (int a, int b, int c) -> {
-//          return a + b * 10;
-//        };
+        InterfaceComun interfaceComun = (int a, int b, int c) -> {
+          return a + b * 10;
+        };
 
 
 
         System.out.println(miSuma.sumar(1,2));
+        System.out.println(interfaceComun.sumar(1,2,3));
 //        System.out.println(interfaceComun.sumar(1,2));
 
     }

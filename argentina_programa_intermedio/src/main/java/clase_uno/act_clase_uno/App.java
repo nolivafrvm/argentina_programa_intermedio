@@ -20,6 +20,7 @@ public class App {
         inscripcion.setAlumno(alumno);
 
         boolean inscripcionAprobada = inscripcion.aprobada();
+        // TODO un cambio
 
         if (inscripcionAprobada) {
             System.out.println("Se pudo inscribir: ".concat(String.valueOf(inscripcionAprobada)));
@@ -33,7 +34,8 @@ public class App {
     static List<Materia> getMateriaAlumno() {
         List<Materia> materiasAprobadas = new ArrayList<>();
         Materia materiaA1 = new Materia("Matematica Basica");
-        Materia materiaA2 = new Materia("Lengua");
+        Materia materiaA2 = new Materia("Matematica Basica");
+//        Materia materiaA2 = new Materia("Lengua");
         Materia materiaA3 = new Materia("Algebra");
 
         materiasAprobadas.add(materiaA1);
@@ -44,15 +46,15 @@ public class App {
     }
 
     static List<Materia> getMateriaCorrelativas() {
-        List<Materia> materiasAprobadas = new ArrayList<>();
+        List<Materia> materiasCorrelativas = new ArrayList<>();
         Materia materiaC1 = new Materia("Matematica Basica");
         Materia materiaC2 = new Materia("Lengua");
         Materia materiaC3 = new Materia("Algebra");
 
-//        materiasAprobadas.add(materiaC1);
-        materiasAprobadas.add(materiaC2);
-        materiasAprobadas.add(materiaC3);
+//        materiasCorrelativas.add(materiaC1);
+        materiasCorrelativas.add(materiaC2);
+        materiasCorrelativas.add(materiaC3);
 
-        return materiasAprobadas;
+        return materiasCorrelativas;
     }
 }
