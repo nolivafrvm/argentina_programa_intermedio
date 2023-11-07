@@ -1,6 +1,9 @@
 package clase_dos.act_clase_dos;
 
+import java.util.ArrayList;
+import java.util.Collection;
 import java.util.List;
+import java.util.stream.Stream;
 
 public class TestApp {
 
@@ -11,6 +14,9 @@ public class TestApp {
         for (String cadMin: cadenasAConvertir) {
             System.out.print(cadMin.concat(", "));
         }
+//        Stream
+//        ArrayList
+//        Collection
 
         List<String> cadenaConvertidas = cadena.convertirAMayuscula(cadenasAConvertir);
         System.out.println();
