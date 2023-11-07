@@ -14,9 +14,10 @@ public class TestApp {
         for (String cadMin: cadenasAConvertir) {
             System.out.print(cadMin.concat(", "));
         }
+
 //        Stream
-//        ArrayList
-//        Collection
+//                Collection
+
 
         List<String> cadenaConvertidas = cadena.convertirAMayuscula(cadenasAConvertir);
         System.out.println();

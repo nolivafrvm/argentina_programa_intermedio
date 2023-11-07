@@ -6,10 +6,21 @@ public class Persona {
     private String apellido;
     private char sexo;
 
-    public Persona(String nombre, String apellido, char sexo) {
+    private boolean licenciaConducir;
+
+    public Persona(String nombre, String apellido, char sexo, boolean licenciaConducir) {
         this.nombre = nombre;
         this.apellido = apellido;
         this.sexo = sexo;
+        this.licenciaConducir = licenciaConducir;
+    }
+
+    public boolean isLicenciaConducir() {
+        return licenciaConducir;
+    }
+
+    public void setLicenciaConducir(boolean licenciaConducir) {
+        this.licenciaConducir = licenciaConducir;
     }
 
     public String getNombre() {

@@ -7,13 +7,11 @@ public class Cadena {
 
 
     public List<String> convertirAMayuscula(List<String> cadenas) {
-        ManejoString manejoString = (x) -> x.toUpperCase();
+        ManejoString manejoString = (palabra) -> palabra.toUpperCase();
         List<String> arrayMayuscula = new ArrayList<>();
-        for (String cadena: cadenas) {
+        for (String cadena : cadenas) {
             arrayMayuscula.add(manejoString.convertirMayuscula(cadena));
         }
-
         return arrayMayuscula;
     }
-
 }
