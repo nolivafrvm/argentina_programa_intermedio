@@ -1,4 +1,4 @@
-package clase_cuatro.patron_comp_state;
+package clase_cuatro.patrones_comportamiento.patron_comp_state;
 
 public interface Estado {
 
