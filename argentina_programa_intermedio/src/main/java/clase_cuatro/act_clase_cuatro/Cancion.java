@@ -12,7 +12,7 @@ public class Cancion {
     private State.PopularidadState estado;
 
     public Cancion(State.PopularidadState estado) {
-        this.estado = new State.NormalState();
+        this.estado = estado;
     }
 
     public void cambiarEstado(State.PopularidadState nuevoEstado) {
