@@ -3,27 +3,32 @@ package clase_siete_act_patter_comb.service;
 
 import clase_siete_act_patter_comb.entity.Empleado;
 import clase_siete_act_patter_comb.repository.EmpleadoRepository;
+import clase_siete_act_patter_comb.strategy.PersistenceStrategy;
 
 import java.util.List;
 
 public class EmpleadoService {
 
-    private final EmpleadoRepository empleadoRepository;
+    private PersistenceStrategy persistenceStrategy;
 
-    public EmpleadoService(EmpleadoRepository empleadoRepository) {
-        this.empleadoRepository = empleadoRepository;
+    public EmpleadoService(PersistenceStrategy persistenceStrategy) {
+        this.persistenceStrategy = persistenceStrategy;
     }
 
     public void guardarEmpleado(Empleado empleado) {
-         empleadoRepository.save(empleado);
+        persistenceStrategy.save(empleado);
     }
 
-    public Empleado obtenerEmpleadoPorId(Long empleadoId) {
-        return empleadoRepository.getById(empleadoId);
+    public Empleado getById(Long empleadoId) {
+        return persistenceStrategy.getById(empleadoId);
     }
 
-    public List<Empleado> getAll() {
-        return empleadoRepository.getAll();
+    public List<Empleado> getAll(String nombre) {
+        return persistenceStrategy.getAll();
+    }
+
+    public void setPersistenceStrategy(PersistenceStrategy persistenceStrategy) {
+        this.persistenceStrategy = persistenceStrategy;
     }
 
 }

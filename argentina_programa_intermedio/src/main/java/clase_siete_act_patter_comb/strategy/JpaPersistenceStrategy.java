@@ -1,14 +1,15 @@
 package clase_siete_act_patter_comb.strategy;
 
 import clase_siete_act_patter_comb.entity.Empleado;
+import clase_siete_act_patter_comb.repository.EmpleadoRepository;
 import clase_siete_act_patter_comb.repository.JpaEmpleadoRepository;
 
 import java.util.List;
 
 public class JpaPersistenceStrategy implements PersistenceStrategy{
-    private JpaEmpleadoRepository jpaEmpleadoRepository;
+    private EmpleadoRepository jpaEmpleadoRepository;
 
-    public JpaPersistenceStrategy(JpaEmpleadoRepository jpaEmpleadoRepository) {
+    public JpaPersistenceStrategy(EmpleadoRepository jpaEmpleadoRepository) {
         this.jpaEmpleadoRepository = jpaEmpleadoRepository;
     }
 
