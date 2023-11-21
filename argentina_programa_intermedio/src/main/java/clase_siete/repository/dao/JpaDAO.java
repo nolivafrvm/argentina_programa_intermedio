@@ -6,7 +6,7 @@ import javax.persistence.Persistence;
 
 public class JpaDAO implements DAO{
 
-    private static final String PERSISTENCE_UNIT_NAME = "JPA_PU";
+    private static final String PERSISTENCE_UNIT_NAME = "JPA_PU_7";
     private final EntityManagerFactory entityManagerFactory;
 
     public JpaDAO() {

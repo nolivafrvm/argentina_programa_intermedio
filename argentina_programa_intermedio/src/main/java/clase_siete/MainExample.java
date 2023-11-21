@@ -16,10 +16,11 @@ public class MainExample {
 
         Empleado emp = new Empleado();
         emp.setId(1L);
+        emp.setNombre("Nico");
         empleadoService.guardarEmpleado(emp);
 
         Empleado empRet = empleadoService.obtenerEmpleadoPorId(1L);
-        System.out.println(empRet);
+        System.out.println(empRet.getNombre());
 
 
     }

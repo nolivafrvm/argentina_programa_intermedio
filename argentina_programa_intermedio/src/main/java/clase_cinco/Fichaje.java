@@ -1,5 +1,7 @@
 package clase_cinco;
 
+import clase_siete.entity.Empleado;
+
 import javax.persistence.*;
 
 @Entity

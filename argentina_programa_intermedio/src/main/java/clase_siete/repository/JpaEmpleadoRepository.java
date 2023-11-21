@@ -1,5 +1,6 @@
 package clase_siete.repository;
 
+
 import clase_siete.entity.Empleado;
 import clase_siete.repository.dao.DAO;
 

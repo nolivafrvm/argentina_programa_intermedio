@@ -22,4 +22,20 @@ public class Empleado {
     public Long getId() {
         return id;
     }
+
+    public List<Fichaje> getFichajes() {
+        return fichajes;
+    }
+
+    public void setFichajes(List<Fichaje> fichajes) {
+        this.fichajes = fichajes;
+    }
+
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
 }
