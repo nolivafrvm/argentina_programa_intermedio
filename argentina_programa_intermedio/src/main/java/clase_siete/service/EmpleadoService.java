@@ -19,7 +19,7 @@ public class EmpleadoService {
     public Empleado guardarEmpleado(Empleado empleado) {
         // VALIDACIONES PARA VER SI PUEDO GUARDAR EL EMPLEADO
         // PROCESAR EMPLEADO
-        if (empleado.getNombre().isEmpty()) {
+        if (empleado.getNombre() == null || empleado.getNombre().isEmpty()) {
             System.out.println("No se puede guardar un empleado sin nombre");
             throw new RuntimeException();
         }

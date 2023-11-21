@@ -14,15 +14,15 @@ public class MainExample {
         DAO dao = new JpaDAO();
         EmpleadoRepository empleadoRepository = new JpaEmpleadoRepository(dao);
         EmpleadoRepository empleadoRepository_file = new FileEmpleadoRepository();
-        EmpleadoService empleadoService = new EmpleadoService(empleadoRepository);
+        EmpleadoService empleadoService = new EmpleadoService(empleadoRepository_file);
 
 
         Empleado emp = new Empleado();
-        emp.setId(1L);
+        emp.setId(1L); // L -> Long
         emp.setNombre("Nico");
         empleadoService.guardarEmpleado(emp);
 
-        empleadoService.setEmpleadoRepository(empleadoRepository_file);
+//        empleadoService.setEmpleadoRepository(empleadoRepository_file);
 
         Empleado empRet = empleadoService.obtenerEmpleadoPorId(1L);
         System.out.println(empRet.getNombre());
