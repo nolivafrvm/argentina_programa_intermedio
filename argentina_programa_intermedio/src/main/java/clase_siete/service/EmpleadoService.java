@@ -9,7 +9,7 @@ import java.util.List;
 
 public class EmpleadoService {
 
-    private final EmpleadoRepository empleadoRepository;
+    private EmpleadoRepository empleadoRepository;
 
     public EmpleadoService(EmpleadoRepository empleadoRepository) {
 
@@ -34,4 +34,11 @@ public class EmpleadoService {
         return empleadoRepository.obtenerEmpleadosPorNombre(nombre);
     }
 
+    public EmpleadoRepository getEmpleadoRepository() {
+        return empleadoRepository;
+    }
+
+    public void setEmpleadoRepository(EmpleadoRepository empleadoRepository) {
+        this.empleadoRepository = empleadoRepository;
+    }
 }

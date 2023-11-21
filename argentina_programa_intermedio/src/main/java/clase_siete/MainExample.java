@@ -2,6 +2,7 @@ package clase_siete;
 
 import clase_siete.entity.Empleado;
 import clase_siete.repository.EmpleadoRepository;
+import clase_siete.repository.FileEmpleadoRepository;
 import clase_siete.repository.JpaEmpleadoRepository;
 import clase_siete.repository.dao.DAO;
 import clase_siete.repository.dao.JpaDAO;
@@ -12,12 +13,16 @@ public class MainExample {
     public static void main(String[] args) {
         DAO dao = new JpaDAO();
         EmpleadoRepository empleadoRepository = new JpaEmpleadoRepository(dao);
+        EmpleadoRepository empleadoRepository_file = new FileEmpleadoRepository();
         EmpleadoService empleadoService = new EmpleadoService(empleadoRepository);
+
 
         Empleado emp = new Empleado();
         emp.setId(1L);
         emp.setNombre("Nico");
         empleadoService.guardarEmpleado(emp);
+
+        empleadoService.setEmpleadoRepository(empleadoRepository_file);
 
         Empleado empRet = empleadoService.obtenerEmpleadoPorId(1L);
         System.out.println(empRet.getNombre());
